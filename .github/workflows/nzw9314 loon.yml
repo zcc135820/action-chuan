@@ -6,7 +6,7 @@ on:
   watch:
     types: started
   repository_dispatch:
-    types: sync nzw9314 loon
+    types: sync nzw9314
 jobs:
   repo-sync:
     env:
@@ -18,7 +18,7 @@ jobs:
         with:
           persist-credentials: false
 
-      - name: sync nzw9314-Loon
+      - name: sync nzw9314
         uses: repo-sync/github-sync@v2
         if: env.PAT
         with:
